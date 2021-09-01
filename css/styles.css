@@ -1,3 +1,16 @@
-body {
-  background-color: orange;
+header {
+  background-color: rgb(0, 0, 0);
+}
+
+header a {
+  color: white;
+}
+
+.cta-button {
+  background-color: #bb0000;
+  color: white;
+}
+
+.reviews {
+  background-color: #e8e8e8;
 }
