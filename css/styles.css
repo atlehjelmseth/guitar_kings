@@ -7,11 +7,18 @@ body {
   font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.info {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: small;
+}
 h1,
-h2,
 .logo {
   font-family: "Boots And Spurs", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
+}
+
+h2 {
+  font-size: smaller;
 }
 .product-list h2 {
   font-family: "Roboto";
@@ -67,4 +74,13 @@ footer {
 
 .review__images {
   border-radius: 50%;
+}
+
+/*contact page*/
+
+input,
+select,
+textarea {
+  border: ipx solid #c4c4c4;
+  border-radius: 5px;
 }

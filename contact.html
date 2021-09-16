@@ -26,6 +26,27 @@
     </header>
     <main>
       <h1>Contact</h1>
+      <h2>
+        <form method="POST">
+          <label for="name" id="name">Your Name</label>
+          <input type="text" name="name" id="name" />
+
+          <label for="email" id="email">E-mail</label>
+          <input type="text" name="email" id="email" />
+
+          <label for="guitar">Guitar</label>
+          <select name="products">
+            <option value="adirondack red">Adirondack Red</option>
+            <option value="adirondack blue">Adirondack Blue</option>
+            <option value="adirondack green">Adirondack Green</option>
+          </select>
+          <input type="checkbox" name="email_updates" id="email_updates" />
+          <label for="email_updates">Sign up for email updates</label>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" cols="30"></textarea>
+          <input type="submit" value="Send Now" class="cta" />
+        </form>
+      </h2>
     </main>
     <footer>Copyright &copy;</footer>
   </body>
