@@ -37,8 +37,18 @@ header a {
   background-color: #bb0000;
   color: white;
   font-size: 1.5em;
+  border-radius: 10px;
+  padding: 10px 5%;
+  text-align: center;
 }
 
+.cta-sale {
+  background-color: #127300;
+  font-size: 1.5em;
+  border-radius: 10px;
+  padding: 10px 5%;
+  text-align: center;
+}
 .reviews {
   background-color: #e8e8e8;
 }
@@ -50,13 +60,28 @@ header a {
   background-color: #fbfbfb;
 }
 
-.cta-sale {
-  background-color: #127300;
-}
-
 footer {
   text-align: center;
 }
+/*navigation*/
+nav ul {
+  padding: 0px;
+}
+nav li {
+  display: inline-block;
+}
+/*links*/
+
+a {
+  text-decoration: none;
+  padding: 10px;
+  float: left;
+}
+
+.current {
+  text-decoration: underline;
+}
+
 /*home page*/
 
 .welcome {
