@@ -35,9 +35,6 @@ footer {
   background-color: #e8e8e8;
 }
 
-.reviews {
-  background-color: #e8e8e8;
-}
 .featured-products {
   background-color: #fbfbfb;
 }
@@ -126,6 +123,7 @@ a {
 .selling-points > * {
   flex: 1;
 }
+
 .selling-points__images {
   border-radius: 100px;
 }
