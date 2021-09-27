@@ -12,6 +12,7 @@ body {
   font-size: small;
 }
 h1,
+h2,
 .logo {
   font-family: "Boots And Spurs", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
@@ -23,14 +24,11 @@ h2 {
 .product-list h2 {
   font-family: "Roboto";
 }
+
 header,
 footer {
   background-color: rgb(0, 0, 0);
   color: #ffffff;
-}
-
-header a {
-  color: white;
 }
 
 .reviews {
@@ -48,12 +46,25 @@ footer {
   text-align: center;
 }
 /*navigation*/
+header {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  margin-left: 25px;
+}
 nav ul {
   padding: 0px;
 }
 nav li {
   display: inline-block;
 }
+
+header a {
+  color: white;
+}
+
 /*links*/
 
 .cta {
@@ -81,7 +92,6 @@ nav li {
 a {
   text-decoration: none;
   padding: 10px;
-  float: left;
 }
 
 .current {
@@ -97,8 +107,25 @@ a {
   background-position-x: right;
   background-position-y: bottom;
   min-height: 70vh;
+  position: relative;
 }
 
+.welcome_content {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  left: 100px;
+}
+
+.selling-points {
+  max-width: 1000px;
+  margin: 50px auto;
+  display: flex;
+}
+
+.selling-points > * {
+  flex: 1;
+}
 .selling-points__images {
   border-radius: 100px;
 }
