@@ -24,29 +24,34 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="contact">
       <h1>Contact</h1>
-      <h2>
-        <form method="POST">
-          <label for="name" id="name">Your Name</label>
-          <input type="text" name="name" id="name" required />
+      <form method="POST">
+        <div class="form-wrapper">
+          <section>
+            <label for="name" id="name">Your Name</label>
+            <input type="text" name="name" id="name" required />
 
-          <label for="email" id="email">E-mail</label>
-          <input type="text" name="email" id="email" required />
-
-          <label for="guitar">Guitar</label>
-          <select name="products">
-            <option value="adirondack red">Adirondack Red</option>
-            <option value="adirondack blue">Adirondack Blue</option>
-            <option value="adirondack green">Adirondack Green</option>
-          </select>
-          <input type="checkbox" name="email_updates" id="email_updates" />
-          <label for="email_updates">Sign up for email updates</label>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" cols="30"></textarea>
-          <input type="submit" value="Send Now" class="cta" />
-        </form>
-      </h2>
+            <label for="email" id="email">E-mail</label>
+            <input type="text" name="email" id="email" required />
+            <label for="guitar">Guitar</label>
+            <select name="products">
+              <option value="adirondack red">Adirondack Red</option>
+              <option value="adirondack blue">Adirondack Blue</option>
+              <option value="adirondack green">Adirondack Green</option>
+            </select>
+            <div>
+              <input type="checkbox" name="email_updates" id="email_updates" />
+              <label for="email_updates">Sign up for email updates</label>
+            </div>
+          </section>
+          <section>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" cols="30"></textarea>
+          </section>
+        </div>
+        <input type="submit" value="Send Now" class="cta" />
+      </form>
     </main>
     <footer>Copyright &copy;</footer>
   </body>

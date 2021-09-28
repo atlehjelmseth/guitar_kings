@@ -127,6 +127,7 @@ a {
 
 .selling-points__images {
   border-radius: 100px;
+  width: 100%;
 }
 
 .reviews {
@@ -157,8 +158,68 @@ a {
 input,
 select,
 textarea {
-  border: ipx solid #c4c4c4;
+  border: 1px solid #c4c4c4;
   border-radius: 5px;
+  margin: 10px 10px 10px 0px;
+  padding: 10px;
+}
+
+textarea {
+  height: 65%;
+}
+.contact {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.form-wrapper {
+  display: flex;
+  text-align: left;
+}
+
+.form-wrapper > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /*product spesific page*/
+
+.product-specific {
+  display: flex;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.product-specific > * {
+  flex: 1;
+}
+
+.product-specific__details {
+  padding: 0 30px;
+}
+
+.product-specific__details a {
+  display: block;
+  width: 250px;
+  margin: auto;
+}
+.product-specific__price {
+  font-size: 1.5em;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-image__thumbnails {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.product-image__thumbnails img {
+  max-width: 100px;
+}
