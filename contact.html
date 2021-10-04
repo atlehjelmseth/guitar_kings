@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="View a list of guitars available from Guitar Kings."
+      content="Contact Guitar Kings for amazing products you'll love"
     />
-    <title>Guitar Kings | Guitars</title>
+    <title>Guitar Kings | Contact</title>
     <link href="css/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/b318972c4d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
       <a href="index.html" class="logo">Guitar Kings</a>
+      <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="guitars.html">Guitars</a></li>
-          <li><a href="contact.html" class="current">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -26,28 +32,27 @@
       <form method="POST">
         <div class="form-wrapper">
           <section>
-            <label for="name" id="name">Your Name</label>
-            <input type="text" name="name" id="name" required />
-
-            <label for="email" id="email">E-mail</label>
-            <input type="text" name="email" id="email" required />
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" />
             <label for="guitar">Guitar</label>
-            <select name="products">
-              <option value="adirondack red">Adirondack Red</option>
-              <option value="adirondack blue">Adirondack Blue</option>
-              <option value="adirondack green">Adirondack Green</option>
+            <select id="guitar" name="Guitar">
+              <option value="Adirondack Red">Adirondack Red</option>
+              <option value="Adirondack Blue">Adirondack Blue</option>
+              <option value="Adirondack Green">Adirondack Green</option>
             </select>
             <div>
-              <input type="checkbox" name="email_updates" id="email_updates" />
-              <label for="email_updates">Sign up for email updates</label>
+              <input type="checkbox" id="email-updates" name="email-updates" />
+              <label for="email-updates">Sign up for email updates.</label>
             </div>
           </section>
           <section>
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" cols="30"></textarea>
+            <textarea id="message" name="message"></textarea>
           </section>
         </div>
-        <input type="submit" value="Send Now" class="cta" />
+        <input type="submit" value="Send Now" class="cta cta-large" />
       </form>
     </main>
     <footer>Copyright &copy;</footer>

@@ -11,25 +11,91 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-.info {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: small;
-}
 h1,
 h2,
 .logo {
   font-family: "Boots And Spurs", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
+  text-align: center;
 }
 
 .product-list h2 {
-  font-family: "Roboto";
+  font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+nav {
+  margin-left: 25px;
+  display: none;
+  position: fixed;
+  top: 45px;
+  background: #202020;
+  z-index: 1000;
+  right: 0px;
+}
+
+nav ul {
+  padding: 0px;
+}
+
+nav li {
+  display: block;
+  padding: 20px 30px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
 }
 
 header,
 footer {
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
+  background-color: #202020;
+  color: #fff;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+header a {
+  color: #fff;
+  padding: 10px;
+}
+
+.cta {
+  background-color: #bb0000;
+  color: #fff;
+  font-size: 1em;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.cta-large {
+  padding: 10px 40px;
+}
+
+.cta-small {
+  padding: 8px 20px;
+  font-size: 0.8em;
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 51.2px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.active {
+  text-decoration: underline;
 }
 
 .reviews {
@@ -53,6 +119,7 @@ footer {
   grid-column: 1;
   font-size: 0.9em;
   margin: 5px;
+  text-align: left;
 }
 
 .products--sale {
@@ -63,8 +130,8 @@ footer {
   text-decoration: line-through;
 }
 
-.featured-products {
-  background-color: #fbfbfb;
+.cta-sale {
+  background-color: #127300;
 }
 
 footer {
@@ -72,96 +139,44 @@ footer {
   padding: 20px;
 }
 
-/*navigation*/
-header {
-  display: flex;
-  align-items: center;
-}
-
-nav {
-  margin-left: 25px;
-}
-nav ul {
-  padding: 0px;
-}
-nav li {
-  display: inline-block;
-}
-
-header a {
-  color: white;
-}
-
-/*links*/
-
-.cta {
-  background-color: #bb0000;
-  color: white;
-  font-size: 1em;
-  border-radius: 5px;
-  padding: 10px 5%;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.cta-sale {
-  background-color: #127300;
-  font-size: 1em;
-  border-radius: 5px;
-  padding: 10px 80px;
-  text-align: center;
-  text-transform: uppercase;
-}
-.cta-small {
-  padding: 8px 20px;
-  font-size: 0.8em;
-  grid-column: 2;
-  grid-row: 2/4;
-  min-width: 51.2px;
-  text-align: center;
-  margin-top: 5px;
-}
-
-a {
-  text-decoration: none;
-  padding: 10px;
-}
-
-.current {
-  text-decoration: underline;
-}
-
-/*home page*/
-
+/* Home page */
 .welcome {
-  background-image: url(../images/home-header.jpg);
+  background-image: url("../images/home-header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: right;
+  background-position-x: center;
   background-position-y: bottom;
   min-height: 70vh;
   position: relative;
 }
 
-.welcome_content {
+.welcome__content {
   position: absolute;
   text-align: center;
-  top: 100px;
-  left: 100px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 210px;
 }
 
 .selling-points {
   margin: 50px auto;
 }
-.selling-points,
-.reviews__content {
+
+.reviews__content,
+.selling-points {
   max-width: 1000px;
   display: flex;
+  flex-direction: column;
 }
 
 .selling-points > *,
 .reviews__content > * {
   flex: 1;
+}
+
+.selling-points h2 {
+  text-align: center;
 }
 
 .selling-points__images {
@@ -180,7 +195,7 @@ a {
 }
 
 .reviews__content div {
-  margin: 50px;
+  margin: 20px;
 }
 
 .review__images {
@@ -195,7 +210,7 @@ a {
 
 .featured {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   max-width: 1000px;
   margin: 50px auto;
   grid-gap: 10px;
@@ -209,8 +224,7 @@ a {
   width: 100%;
 }
 
-/*contact page*/
-
+/* Contact page */
 input,
 select,
 textarea {
@@ -222,7 +236,9 @@ textarea {
 
 textarea {
   height: 65%;
+  min-height: 100px;
 }
+
 .contact {
   max-width: 1000px;
   margin: 50px auto;
@@ -232,6 +248,7 @@ textarea {
 .form-wrapper {
   display: flex;
   text-align: left;
+  flex-direction: column;
 }
 
 .form-wrapper > * {
@@ -240,12 +257,12 @@ textarea {
   flex-direction: column;
 }
 
-/*product spesific page*/
-
+/* Product Specific Page*/
 .product-specific {
   display: flex;
   max-width: 1000px;
-  margin: 50px auto;
+  flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .product-specific > * {
@@ -253,14 +270,15 @@ textarea {
 }
 
 .product-specific__details {
-  padding: 0 30px;
+  padding: 0px 30px;
 }
 
 .product-specific__details a {
   display: block;
-  width: 250px;
+  width: 95.767px;
   margin: auto;
 }
+
 .product-specific__price {
   font-size: 1.5em;
 }
@@ -269,19 +287,14 @@ textarea {
   width: 100%;
 }
 
-.product-image__thumbnails {
+.product-image_thumbnails {
   display: flex;
   justify-content: space-between;
   gap: 10px;
   margin-top: 5px;
 }
 
-.product-image__thumbnails img {
-  max-width: 100px;
-}
-
-/* guitars page*/
-
+/*Guitars Page*/
 .guitars {
   max-width: 1000px;
   margin: auto;
@@ -289,10 +302,98 @@ textarea {
 
 .product-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   grid-gap: 20px;
 }
 
 .products img {
   width: 100%;
+}
+
+@media (min-width: 400px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 600px) {
+  .featured {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reviews__content,
+  .selling-points {
+    flex-direction: row;
+  }
+
+  header {
+    justify-content: start;
+  }
+
+  nav {
+    display: block;
+    position: static;
+  }
+
+  nav li {
+    display: inline-block;
+    padding: 0px;
+  }
+
+  header label {
+    display: none;
+  }
+
+  .product-specific {
+    flex-direction: column-reverse;
+  }
+
+  .product-specific__details {
+    margin-bottom: 50px;
+  }
+
+  .form-wrapper {
+    flex-direction: row;
+  }
+
+  .selling-points h2 {
+    text-align: left;
+  }
+}
+
+@media (min-width: 800px) {
+  .featured {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .reviews__content div {
+    margin: 50px;
+  }
+
+  .welcome {
+    background-position-x: right;
+  }
+
+  .welcome__content {
+    top: 100px;
+    left: 100px;
+    transform: none;
+  }
+
+  .cta-large {
+    padding: 10px 80px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .product-specific {
+    flex-direction: row;
+    margin: 50px auto;
+  }
+
+  .product-specific__details {
+    margin-bottom: 0px;
+  }
 }

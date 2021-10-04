@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="View a list of guitars available from Guitar Kings."
+      content="View our most popular guitar - the Adirondack Red"
     />
-    <title>Guitar Kings | Guitars</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <title>Guitar Kings | Adirondack Red</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/b318972c4d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <a href="../index.html" class="logo">Guitar Kings</a>
+      <a href="index.html" class="logo">Guitar Kings</a>
+      <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
       <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="../guitars.html" class="current">Guitars</a></li>
+          <li><a href="../guitars.html" class="active">Guitars</a></li>
           <li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -28,43 +34,53 @@
           alt="Adirondack Red"
           class="product-image"
         />
-        <div class="product-image__thumbnails">
-          <img
-            src="../images/product-specific.jpg"
-            alt="Playing the Andirondack Red"
-            class="product-image"
-          />
-          <img
-            src="../images/product-specific.jpg"
-            alt="Playing the Andirondack Red"
-            class="product-image"
-          />
-          <img
-            src="../images/product-specific.jpg"
-            alt="Playing the Andirondack Red"
-            class="product-image"
-          />
-          <img
-            src="../images/product-specific.jpg"
-            alt="Playing the Andirondack Red"
-            class="product-image"
-          />
+        <div class="product-image_thumbnails">
+          <div>
+            <img
+              src="../images/product-specific.jpg"
+              alt="Playing the Adirondack Red"
+              class="product-image"
+            />
+          </div>
+          <div>
+            <img
+              src="../images/product-specific.jpg"
+              alt="Playing the Adirondack Red"
+              class="product-image"
+            />
+          </div>
+          <div>
+            <img
+              src="../images/product-specific.jpg"
+              alt="Playing the Adirondack Red"
+              class="product-image"
+            />
+          </div>
+          <div>
+            <img
+              src="../images/product-specific.jpg"
+              alt="Playing the Adirondack Red"
+              class="product-image"
+            />
+          </div>
         </div>
       </section>
       <section class="product-specific__details">
         <h1>Adirondack Red</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-          eaque omnis, ea tempore autem ipsam et? Quidem, quis harum neque ut
-          totam nemo.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+          repellendus? Quae dolores, non maxime perferendis facilis fuga labore
+          aliquam nesciunt amet quaerat est rem excepturi modi voluptas
+          voluptates corrupti fugit?
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
-          eaque omnis, ea tempore autem ipsam et? Quidem, quis harum neque ut
-          totam nemo.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sunt
+          sed commodi, sapiente blanditiis voluptatibus tempora eveniet, minus
+          quibusdam, laudantium dicta delectus exercitationem quo. Itaque sint
+          mollitia aspernatur. Deserunt, sequi.
         </p>
         <p class="product-specific__price">$500</p>
-        <a href="../contact.html" class="cta">Contact us</a>
+        <a href="../contact.html" class="cta cta-large">Contact Us</a>
       </section>
     </main>
     <footer>Copyright &copy;</footer>
