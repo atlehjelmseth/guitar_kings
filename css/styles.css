@@ -78,6 +78,26 @@ header a {
   font-size: 1em;
   text-transform: uppercase;
   border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.cta:before {
+  content: "";
+  padding: 10px;
+  background: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  height: 100px;
+  top: -40px;
+  left: -100px;
+  transition: left ease-in-out 1s;
+  opacity: 0.3;
+}
+
+.cta:hover:before {
+  left: 110%;
 }
 
 .cta-large {
@@ -298,6 +318,23 @@ textarea {
 .guitars {
   max-width: 1000px;
   margin: auto;
+}
+
+.guitars .products {
+  animation: show-guitars 1s forwards;
+  opacity: 0;
+}
+
+@keyframes show-guitars {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .product-list {
